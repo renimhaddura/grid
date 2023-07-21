@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  height: 100vh;
+  grid-template-areas:
+    "Header Menu Menu Menu"
+    "Hero Hero Hero Hero"
+    "Hero Hero Hero Hero"
+    "Hero Hero Hero Hero"
+    "Hero Hero Hero Hero"
+    "Hero Hero Hero Hero"
+    " main main empty img "
+    " main main empty img "
+    " main main empty extra "
+    " main main empty extra "
+    " banner banner banner banner "
+    " banner banner banner banner ";
+}
+
+.item1 {
+  background-color: rgb(1, 1, 39);
+  grid-area: Header;
+  color: white;
+}
+.item2 {
+  background-color: rgb(145, 0, 80);
+  grid-area: Menu;
+  color: white;
+}
+.item3 {
+  background-color: rgb(0, 116, 145);
+  grid-area: Hero;
+  color: white;
+}
+
+.item4 {
+  background-color: rgb(23, 33, 78);
+  grid-area: main;
+  color: white;
+}
+.item5 {
+  background-color: white;
+  grid-area: empty;
+}
+.item6 {
+  background-color: rgb(171, 219, 228);
+  grid-area: img;
+  color: black;
+}
+.item7 {
+  background-color: rgb(31, 104, 98);
+  grid-area: extra;
+  color: black;
+}
+.item8 {
+  background-color: rgb(238, 220, 118);
+  grid-area: banner;
+  color: black;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-device-width: 480px) {
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
+    grid-template-areas:
+      "Header"
+      "Menu"
+      "Hero"
+      "Hero"
+      "Hero"
+      " main "
+      " main  "
+      " main  "
+      " banner"
+      " banner"
+      "extra"
+      "extra"
+      "img"
+      "img";
+  }
+
+  .item1 {
+    background-color: rgb(1, 1, 39);
+    grid-area: Header;
+    color: white;
+  }
+  .item2 {
+    background-color: rgb(145, 0, 80);
+    grid-area: Menu;
+    color: white;
+  }
+  .item3 {
+    background-color: rgb(0, 116, 145);
+    grid-area: Hero;
+    color: white;
+  }
+
+  .item4 {
+    background-color: rgb(23, 33, 78);
+    grid-area: main;
+    color: white;
+  }
+  /* .item5 {
+    background-color: white;
+    grid-area: empty;
+  } */
+  .item6 {
+    background-color: rgb(171, 219, 228);
+    grid-area: img;
+    color: black;
+  }
+  .item7 {
+    background-color: rgb(31, 104, 98);
+    grid-area: extra;
+    color: black;
+  }
+  .item8 {
+    background-color: rgb(238, 220, 118);
+    grid-area: banner;
+    color: black;
+  }
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
